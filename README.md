@@ -1,8 +1,9 @@
-# React + Vite
+# React + Tailwind Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Task Manager Project
+### This Task Manager project features a modal with a form that opens when the "Add" button is clicked. In this form, you can specify the task's text and set a deadline date. In the notes section, the background color of the notes changes once the deadline passes or on the day of the deadline itself.
 
-Currently, two official plugins are available:
+### The project also includes inline editing capabilities, allowing you to modify both the text and the deadline directly. Additionally, you can easily delete notes or rearrange them using the drag-and-drop functionality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+![project](./src/assets/project.png)
