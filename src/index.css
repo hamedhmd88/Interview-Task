@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: "Afacad Flux", sans-serif;
+  
+}
+.text-shadow {
+  text-shadow:  2px 4px rgba(0, 0, 0, 0.5);
+}
+.App {
+  min-height: 100vh;
+  background: url("./assets/background-image.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.blurred {
+  filter: blur(4px);
+}
+
+/* Animation for opening the modal */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation for closing the modal */
+@keyframes fadeOutScale {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.modal-enter {
+  animation: fadeInScale 0.3s ease-out forwards; /* Open animation */
+}
+
+.modal-exit {
+  animation: fadeOutScale 0.3s ease-out forwards; /* Close animation */
+}
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive square grid */
+  gap: 1rem; /* Adjust gap between grid items */
+  margin: 12px 55px;
+}
+.task-list {
+  display: grid;
+  gap: 16px;
+}
+
+.task-item {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.task-item.dragging {
+  background-color: #f0f0f0;
+  opacity: 0.7;
+  border: 2px dashed #007bff;
+}
+
