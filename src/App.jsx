@@ -37,7 +37,7 @@ function App() {
     <div className={`App ${isModalOpen ? "bg-slate-900 h-full w-full" : ""}`}>
       {/* Header section */}
       <h2 className="text-5xl text-gray-800 font-bold text-center py-5 text-shadow">
-        Task Manager
+        Task Board
       </h2>
 
       {/* Button to open the modal for adding a new task */}
