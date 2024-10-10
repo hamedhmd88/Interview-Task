@@ -5,6 +5,7 @@ const TaskForm = ({ addTask, editTask, closeModal, editingTask }) => {
   const [deadline, setDeadline] = useState("");
   const [creationDate, setCreationDate] = useState("");
   const [error, setError] = useState("");
+  const [textError, setTextError] = useState("");
   const [animationClass, setAnimationClass] = useState("modal-enter"); // Initial animation class
 
   useEffect(() => {
@@ -38,12 +39,19 @@ const TaskForm = ({ addTask, editTask, closeModal, editingTask }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setError("");
+    setTextError("");
 
     // Error handling logic
     if (!taskText || !deadline) {
       setError("Both task text and deadline are required.");
       return;
     }
+
+    // Check if the task text exceeds 25 characters
+  if (taskText.length > 25) {
+    setTextError("Task text must be less than 25 characters.");
+    return;
+  }
 
     // If editing an existing task or adding a new one
     if (taskText.trim() && deadline) {
@@ -77,6 +85,7 @@ const TaskForm = ({ addTask, editTask, closeModal, editingTask }) => {
           {editingTask ? "Edit Task" : "Add a New Task"}
         </h3>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+        {textError && <p className="text-red-500 text-center mb-4">{textError}</p>}
         <form
           onSubmit={handleSubmit}
           className="flex flex-col items-center w-full"
