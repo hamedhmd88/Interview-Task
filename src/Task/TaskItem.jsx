@@ -25,7 +25,7 @@ const TaskItem = ({
 
   return (
     <div
-      className={` overflow-hidden relative task-item p-4 rounded-lg shadow-md flex flex-col justify-between ${
+      className={`overflow-hidden relative task-item p-4 rounded-lg shadow-md flex flex-col justify-between ${
         isDeadlinePassed ? "card-2" : "card-1"
       } ${isDragging ? "dragging" : ""}`} // Dynamically add the "dragging" class when dragging
       draggable
@@ -99,7 +99,10 @@ const TaskItem = ({
             <FaPen />
           </button>
         )}
-        <button onClick={() => deleteTask(task.id)} className={`${isDeadlinePassed ? "text-white" : "text-red-500"}`}>
+        <button
+          onClick={() => deleteTask(task.id)}
+          className={`${isDeadlinePassed ? "text-white" : "text-red-500"}`}
+        >
           <FaTrash />
         </button>
       </div>

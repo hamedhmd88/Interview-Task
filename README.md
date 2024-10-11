@@ -5,7 +5,12 @@
 
  The project also includes inline editing capabilities, allowing you to modify both the text and the deadline directly. Additionally, you can easily delete notes or rearrange them using the drag-and-drop functionality.
 
- ![project](./src/assets/project.png)
+## Project Demo
+
+For more details about this project, visit [the official website](https://interview-task-coral.vercel.app/).
+
+ ![project](./src/assets/project%202.png)
+ ![project](./src/assets/project%201.png)
 
 
  ## how to install
