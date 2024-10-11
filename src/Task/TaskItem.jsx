@@ -25,8 +25,8 @@ const TaskItem = ({
 
   return (
     <div
-      className={`task-item p-4 rounded-lg shadow-md flex flex-col justify-between ${
-        isDeadlinePassed ? "bg-red-400" : "bg-gray-300"
+      className={` relative task-item p-4 rounded-lg shadow-md flex flex-col justify-between ${
+        isDeadlinePassed ? "card-2" : "card-1"
       } ${isDragging ? "dragging" : ""}`} // Dynamically add the "dragging" class when dragging
       draggable
       onDragStart={(e) => {
@@ -72,7 +72,7 @@ const TaskItem = ({
             <p className="text-sm">Created: {task.creationDate}</p>
             <p className="text-sm">Deadline: {task.deadline}</p>
             {isDeadlinePassed ? (
-              <p className="text-red-600 font-semibold">
+              <p className="text-gray-800 font-semibold">
                 The deadline has passed!
               </p>
             ) : (
@@ -99,7 +99,7 @@ const TaskItem = ({
             <FaPen />
           </button>
         )}
-        <button onClick={() => deleteTask(task.id)} className="text-red-500">
+        <button onClick={() => deleteTask(task.id)} className={`${isDeadlinePassed ? "text-white" : "text-red-500"}`}>
           <FaTrash />
         </button>
       </div>
