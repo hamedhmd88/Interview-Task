@@ -1,19 +1,26 @@
 # React + Tailwind Task Board
 
+## Project Demo
+
+For more details about this project, visit [Task Board](https://interview-task-coral.vercel.app/).
+
 ## Task Manager Project
  This Task Manager project features a modal with a form that opens when the "Add" button is clicked. In this form, you can specify the task's text and set a deadline date. In the notes section, the background color of the notes changes once the deadline passes or on the day of the deadline itself.
 
  The project also includes inline editing capabilities, allowing you to modify both the text and the deadline directly. Additionally, you can easily delete notes or rearrange them using the drag-and-drop functionality.
 
-## Project Demo
+<br/>
+<br/>
+<br/>
 
-For more details about this project, visit [the official website](https://interview-task-coral.vercel.app/).
 
  ![project](./src/assets/project%202.png)
- ![project](./src/assets/project%201.png)
+ 
+<br/>
+<br/>
+<br/>
 
-
- ## how to install
+ ## How to install
 
 # React Vite Project
 
