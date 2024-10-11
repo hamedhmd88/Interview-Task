@@ -80,11 +80,7 @@ body {
 
 
 .card-1 {
-  background: linear-gradient(
-    to bottom left,
-    transparent 35px,
-    rgb(199, 197, 197) 0
-  );
+  background: linear-gradient(-135deg, transparent 35px, rgb(199, 197, 197) 0);
   color: #222;
 }
 
@@ -93,20 +89,22 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 71px;
-  height: 40px;
+  width: 49px;
+  height: 49px;
   background: linear-gradient(
     to bottom left,
     transparent 50%,
-    rgb(169, 169, 167) 0
+    rgb(190, 190, 185) 0
   );
   border-bottom-left-radius: 0.5rem;
-  box-shadow: -5px 5px 5px rgb(134, 134, 129);
+  box-shadow: -5px 5px 5px rgb(122, 122, 121);
 }
 
 .card-2 {
   background: linear-gradient(-135deg, transparent 35px, rgb(228, 74, 74) 0);
-  color: #f3f3f3;
+  color: #222;
+  overflow: hidden;
+
 }
 
 .card-2:before {
@@ -119,4 +117,5 @@ body {
   background: linear-gradient(to bottom left, transparent 50%, rgb(214, 57, 57) 0);
   border-bottom-left-radius: 0.5rem;
   box-shadow: -5px 5px 5px rgb(183, 43, 43);
+
 }

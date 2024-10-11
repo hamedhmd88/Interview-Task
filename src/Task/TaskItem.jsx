@@ -25,7 +25,7 @@ const TaskItem = ({
 
   return (
     <div
-      className={` relative task-item p-4 rounded-lg shadow-md flex flex-col justify-between ${
+      className={` overflow-hidden relative task-item p-4 rounded-lg shadow-md flex flex-col justify-between ${
         isDeadlinePassed ? "card-2" : "card-1"
       } ${isDragging ? "dragging" : ""}`} // Dynamically add the "dragging" class when dragging
       draggable
@@ -56,7 +56,7 @@ const TaskItem = ({
               value={editedDeadline}
               min={task.creationDate}
               onChange={(e) => setEditedDeadline(e.target.value)}
-              className="border p-2 mb-2 w-full"
+              className=" border p-2 mb-2 w-full"
             />
           </>
         ) : (
